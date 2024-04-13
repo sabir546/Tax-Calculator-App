@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Income Tax Calculator</title>
+</head>
+
+<body>
+  <div>
+    <div id="header">
+      <div class="slideshow">
+        <div class="slideshow-image"></div>
+        <div class="slideshow-image"> </div>
+        <div class="slideshow-image"></div>
+        <div class="slideshow-image"></div>
+      </div>
+      <div id="h1Wrap">
+        <h1>Income Tax Calculator</h1>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="container">
+        <div class="card">
+          <h3>Calculate your Income Tax</h3>
+          <hr>
+          <form id="taxForm">
+
+            <label for="income">Enter Annual Income:</label>
+            <input type="number" id="income" name="income" min="0">
+            <br>
+            <label for="extraIncome">Extra Income:</label>
+            <input type="number" id="extraIncome" name="extraIncome" min="0">
+            <br>
+            <label for="age">Age:</label>
+            <select id="age" name="age">
+              <option value="<40">Less than 40</option>
+              <option value=">=40&<60">40 to 60</option>
+              <option value=">=60">more than 60</option>
+            </select>
+            <br>
+            <label for="deductions">Deductions:</label>
+            <input type="number" id="deductions" name="deductions" min="0">
+            <br>
+            <button type="submit">Submit</button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="errorIcons">
+      <span id="ageError" class="error" title="Age is mandatory">*</span>
+      <span id="incomeError" class="error" title="Invalid input">*</span>
+      <span id="extraIncomeError" class="error" title="Invalid input">*</span>
+      <span id="deductionsError" class="error" title="Invalid input">*</span>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Tax Calculation Result</h2>
+        <p id="taxResult"></p>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
