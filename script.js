@@ -6,12 +6,7 @@ document.getElementById("taxForm").addEventListener("submit", function (event) {
     parseFloat(document.getElementById("extraIncome").value) || 0; // Default to 0 if empty or invalid
   const deductions =
     parseFloat(document.getElementById("deductions").value) || 0; // Default to 0 if empty or invalid
-
-  // Clear existing error icons
-  document.querySelectorAll(".error").forEach(function (icon) {
-    icon.style.display = "none";
-  });
-
+  
   // Validate inputs
   let hasError = false;
   if (!age) {
@@ -51,7 +46,7 @@ document.getElementById("taxForm").addEventListener("submit", function (event) {
     // Display result in modal
     const modal = document.getElementById("modal");
     const taxResult = document.getElementById("taxResult");
-    taxResult.textContent = `Tax Amount: ${taxAmount.toFixed(2)} Lakhs`;
+    taxResult.textContent = `Tax Amount: ${taxAmount.toFixed(2)} INR`;
     modal.style.display = "block";
 
     // Close modal when close button is clicked

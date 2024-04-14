@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
   <link rel="stylesheet" href="style.css">
   <title>Income Tax Calculator</title>
 </head>
@@ -27,26 +28,34 @@
       <div id="container">
         <div class="card">
           <h3>Calculate your Income Tax</h3>
-          <hr>
+
           <form id="taxForm">
 
             <label for="income">Enter Annual Income:</label>
-            <input type="number" id="income" name="income" min="0">
-            <br>
-            <label for="extraIncome">Extra Income:</label>
-            <input type="number" id="extraIncome" name="extraIncome" min="0">
-            <br>
-            <label for="age">Age:</label>
-            <select id="age" name="age">
-              <option value="<40">Less than 40</option>
-              <option value=">=40&<60">40 to 60</option>
-              <option value=">=60">more than 60</option>
-            </select>
-            <br>
-            <label for="deductions">Deductions:</label>
-            <input type="number" id="deductions" name="deductions" min="0">
-            <br>
-            <button type="submit">Submit</button>
+            <i class="ri-question-line"></i>
+
+                <input type="number" id="income" name="income" min="0" placeholder="Enter Annual Income" required>
+                <i class="ri-error-warning-line tooltip"></i>
+                <br>
+                <label for="extraIncome">Extra Income:</label>
+                <i class="ri-question-line"></i>
+
+                <input  type="number" id="extraIncome" name="extraIncome" min="0" placeholder="Enter Extra Income">
+                
+                <br>
+                <label for="age">Age:</label> <i class="ri-question-line"></i>
+                <select id="age" name="age">
+                  <option value="<40">Less than 40</option>
+                  <option value=">=40&<60">40 to 60</option>
+                  <option value=">=60">more than 60</option>
+                </select>
+                <br>
+                <label for="deductions">Deductions:</label>
+                <i class="ri-question-line"></i>
+
+                <input type="number" id="deductions" name="deductions" min="0" placeholder="Enter Deductions">
+                <br>
+                <button type="submit">Calculate</button>
           </form>
 
         </div>
@@ -55,17 +64,17 @@
     </div>
 
     <div id="errorIcons">
-      <span id="ageError" class="error" title="Age is mandatory">*</span>
-      <span id="incomeError" class="error" title="Invalid input">*</span>
-      <span id="extraIncomeError" class="error" title="Invalid input">*</span>
-      <span id="deductionsError" class="error" title="Invalid input">*</span>
+      <span id="ageError" class="error" title="Age is mandatory">please select from option</span>
+      <span id="incomeError" class="error" title="Invalid input">please numbers only</span>
+      <span id="extraIncomeError" class="error" title="Invalid input">please numbers only</span>
+      <span id="deductionsError" class="error" title="Invalid input">please numbers only</span>
     </div>
 
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Tax Calculation Result</h2>
-        <p id="taxResult"></p>
+        <h5 id="taxResult"></h5>
       </div>
     </div>
 
