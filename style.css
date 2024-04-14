@@ -18,6 +18,34 @@ html, body {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
   }
+
+  
+  .modal2 {
+    display: none;
+    position:absolute;
+    z-index: 100;
+    left:30%;
+    top: 1%;
+    width: 10%;
+    height: 19%;
+    border-radius: 4px;
+    padding: 5px;
+    /* overflow: auto; */
+    /* background-color: rgb(0,0,0); */
+    background-color:#4c5d6b;
+    
+  }
+.mod{
+  transition: all ease-in-out .5s;
+}
+
+  #error{
+    line-height: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+
+    }
   
   button{
     padding: 10px 22px;
@@ -46,7 +74,7 @@ html, body {
   
   .close:hover,
   .close:focus {
-    color: black;
+    color:red;
     text-decoration: none;
     cursor: pointer;
   }
@@ -155,6 +183,8 @@ input {
   top: 35px;
   margin-left: 5px;
 }
+
+  
 
 .ri-question-line{
   font-size: 17px;
@@ -410,14 +440,28 @@ input {
 
 
 
-
-  .tooltip {
-    float:right;
-    color:rgba(44, 43, 43, 0.827);
-    padding: 2px 5px;
-    margin-top: -22px;
-    border-radius: 5px;
-    font-size: 18px;
-    z-index: 10;
+  .tooltip,.tooltip2,.tooltip3 {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: -2.7%;
+    font-size: 22px;
+    color: #888;
+    padding-right: 3px;
   }
+
   
+
+.error-message ,.error-message2,.error-message3 {
+  background-color:#4c5d6b;
+margin-right:-14vw ;
+margin-top:-4.5vw;
+  float: right;
+    display: none;
+    color: white;
+    border: 1px solid black;
+    padding: 7px 12px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+

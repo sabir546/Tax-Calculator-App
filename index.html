@@ -29,33 +29,45 @@
         <div class="card">
           <h3>Calculate your Income Tax</h3>
 
+          <div class="modal2 mod ">
+            <p id="error">Gross annual income is your total salary in a year before any deductions</p>
+          </div>
           <form id="taxForm">
 
             <label for="income">Enter Annual Income:</label>
+            <i id="annual" class="ri-question-line annual"></i>
+
+            <input type="text" id="income" name="income" min="0" placeholder="Enter Annual Income" required>
+            <i class="ri-error-warning-line tooltip"></i>
+            <div id="error-message" class="error-message"> Please enter numbers only</div>
+            
+
+            <br>
+            <label for="extraIncome">Extra Income:</label>
             <i class="ri-question-line"></i>
 
-                <input type="number" id="income" name="income" min="0" placeholder="Enter Annual Income" required>
-                <i class="ri-error-warning-line tooltip"></i>
-                <br>
-                <label for="extraIncome">Extra Income:</label>
-                <i class="ri-question-line"></i>
+            <input type="text" id="extraIncome" name="extraIncome" min="0" placeholder="Enter Extra Income">
+            <i class="ri-error-warning-line tooltip2"></i>
+            <div id="error-message2" class="error-message2"> Please enter numbers only</div>
 
-                <input  type="number" id="extraIncome" name="extraIncome" min="0" placeholder="Enter Extra Income">
-                
-                <br>
-                <label for="age">Age:</label> <i class="ri-question-line"></i>
-                <select id="age" name="age">
-                  <option value="<40">Less than 40</option>
-                  <option value=">=40&<60">40 to 60</option>
-                  <option value=">=60">more than 60</option>
-                </select>
-                <br>
-                <label for="deductions">Deductions:</label>
-                <i class="ri-question-line"></i>
+            <br>
+            <label for="age">Age:</label> <i class="ri-question-line"></i>
+            <select id="age" name="age">
+              <option value="<40">Less than 40</option>
+              <option value=">=40&<60">40 to 60</option>
+              <option value=">=60">more than 60</option>
+            </select>
+            <br>
 
-                <input type="number" id="deductions" name="deductions" min="0" placeholder="Enter Deductions">
-                <br>
-                <button type="submit">Calculate</button>
+            <label for="deductions">Deductions:</label>
+            <i class="ri-question-line"></i>
+
+            <input type="text" id="deductions" name="deductions" min="0" placeholder="Enter Deductions">
+            <i class="ri-error-warning-line tooltip3"></i>
+            <div id="error-message3" class="error-message3"> Please enter numbers only</div>
+
+            <br>
+            <button type="submit">Calculate</button>
           </form>
 
         </div>
@@ -77,6 +89,10 @@
         <h5 id="taxResult"></h5>
       </div>
     </div>
+
+
+
+
 
   </div>
   <script src="script.js"></script>
