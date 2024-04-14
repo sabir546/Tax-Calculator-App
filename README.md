@@ -1,6 +1,11 @@
 # Income Tax Calculator
 
 This is a simple web-based income tax calculator that allows users to calculate their income tax based on their annual income, age, extra income, and deductions.
+   
+## DEMO=>  https://tax-calculator-app-omega.vercel.app/
+
+![screenshort](https://github.com/sabir546/Tax-Calculator-App/blob/main/images/Tax_calculator.png)
+
 
 ## Features
 
@@ -38,5 +43,4 @@ This is a simple web-based income tax calculator that allows users to calculate 
 
 This project was created by  md gulam sabir.
 
-## DEMO=>  https://tax-calculator-app-omega.vercel.app/
 
